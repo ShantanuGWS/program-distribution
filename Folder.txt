@@ -1,0 +1,83 @@
+#base by GWS(QR_Code_Generator.)
+#re-upload? recode? copy code? give credit :)
+#YouTube: http://www.youtube.com/@DCsArpit
+#Instagram: @dcsradioyt12
+#Telegram: t.me/gws143
+#GitHub: @ShantanuGWS
+#WhatsApp: +918090541900
+#want more free scripts? subscribe to my youtube channel: https://youtube.com/@DCsArpit
+#owner: GWS - Unknown Gamer
+#Author: Shantanu Patel
+
+import time
+
+logo = """   
+                 ______        _______
+                / ___\ \      / / ___| 
+               | |  _ \ \ /\ / /\___ \ 
+               | |_| | \ V  V /  ___) |
+                \____|  \_/\_/  |____/ 
+               
+"""
+
+time.sleep(0.5)
+print(logo)
+time.sleep(0.7)
+print(f"{'='*18}[Created by GWS]{'='*17}")
+
+
+style = """
+
+Owner: ♣Gaming World Studio♣ OR ♥Mr.Unknown♥
+
+Script Creater: ★Shantanu★
+
+YT Channel: http://www.youtube.com/@DCsArpit 
+
+Github: ShantanuGWS♠
+___________________________________________________
+"""
+time.sleep(1)
+print(style)
+time.sleep(0.6)
+#Styling End
+
+
+
+
+import os
+
+start = input ("Enter anything for starting this program:")
+
+
+while True:
+        try:
+            folders = input("\nFor creating Folder Enter '1 ' And Deleting Folder Enter '2':")
+    
+            if(folders == "1"):
+                folder_name = input("\nEnter folder name:")
+        
+                num_of_folder = int(input("How many folders you want:"))
+    	
+                for i in range(0,num_of_folder):
+                    if (not os.path.exists("news")):
+                        os.mkdir(f"{folder_name} {i+1}")
+                        print("Wait....")
+                        time.sleep(0.2)         
+                        print("Success...")
+        
+        #Deleting Folder
+        
+            else:
+               del_folder_name = input("\nEnter folder name:")
+        
+               num_of_del_folder = int(input("How many folders you want to delete:"))
+    	
+               for i in range(num_of_del_folder):
+                   os.rmdir(f"{del_folder_name} {i+1}")
+                   print("Wait....")
+                   time.sleep(0.2)
+                   print("Success...")
+    	
+        except:
+            print("Error!")
