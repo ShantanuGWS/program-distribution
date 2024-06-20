@@ -1,0 +1,69 @@
+#base by GWS(QR_Code_Generator.)
+#re-upload? recode? copy code? give credit :)
+#YouTube: http://www.youtube.com/@DCsArpit
+#Instagram: @dcsradioyt12
+#Telegram: t.me/gws143
+#GitHub: @ShantanuGWS
+#WhatsApp: +918090541900
+#want more free scripts? subscribe to my youtube channel: https://youtube.com/@DCsArpit
+#owner: GWS - Unknown Gamer
+#Author: Shantanu Patel
+
+import time
+import colorama
+
+logo = """   
+                 ______        ______
+               / ___\ \      / / ___| 
+              | |  _ \ \ /\ / /\___ \ 
+              | |_| | \ V  V /  ___) |
+               \____|  \_/\_/  |____/ 
+               
+"""
+time.sleep(1)
+print(colorama.Fore.YELLOW + logo)
+print(colorama.Fore.RESET)
+
+time.sleep(0.6)
+print(f"{'='*18}[Created by GWS]{'='*17}")
+
+style = """
+
+Owner: ♣Gaming World Studio♣ OR ♥Mr.Unknown♥
+
+Script Creater: ★Shantanu★
+
+YT Channel: http://www.youtube.com/@DCsArpit 
+
+Github: ShantanuGWS♠
+"""
+
+time.sleep(0.8)
+print(colorama.Fore.BLUE + style)
+print(colorama.Fore.RESET)
+print("_"*51)
+
+import qrcode as qr
+import os
+
+colorama.init()
+
+try:
+    if (os.path.exists("GWS")):
+        print("Folder Alreadey Created!")
+    else:
+        os.mkdir("/storage/emulated/0/GWS")
+except:
+    print("\nFolder Already Exists!!")
+    
+while True:
+    inp = input("\nEnter Any Text Or Website URL For QR Code:")
+    img = qr.make(inp)
+    time.sleep(1.2)
+    save_name = input(colorama.Fore.WHITE + "\nEnter Name Of QR With Extension Of png\nEx:- pic.png:")
+    img.save(f"/storage/emulated/0/GWS/{save_name}")
+    
+    print(colorama.Fore.GREEN + "\nQR Generated Successfull!.\nGo And Find Folder  Name :- GWS \nIn Your Mobile Phone Storage\n")
+    
+    print('*'*51)
+
