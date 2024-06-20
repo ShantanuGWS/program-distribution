@@ -1,0 +1,36 @@
+import turtle
+
+# Set up the screen
+screen = turtle.Screen()
+screen.title("Turtle Graphics - Tree")
+screen.bgcolor("white")
+
+# Create a turtle
+t = turtle.Turtle()
+t.shape("classic")
+t.color("green")
+t.speed(10)  # Set the turtle's speed
+
+# Function to draw a tree
+def draw_tree(branch_length, t):
+    if branch_length > 5:
+        t.forward(branch_length)
+        t.right(20)
+        draw_tree(branch_length - 15, t)
+        t.left(40)
+        draw_tree(branch_length - 15, t)
+        t.right(20)
+        t.backward(branch_length)
+
+# Initial position
+t.left(90)
+t.up()
+t.backward(100)
+t.down()
+t.color("brown")
+
+# Draw the tree
+draw_tree(100, t)
+
+# Finish the drawing
+turtle.done()
