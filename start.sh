@@ -10,6 +10,7 @@ blue = "\033[94;1m"
 white = "\033[97;1m"
 blink = "\033[5m"
 
+clear
 
 echo
 echo
